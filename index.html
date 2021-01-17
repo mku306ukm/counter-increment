@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter-increment</title>
+    <style>
+        body{font:15px/21px arial;padding: 10px 0 0 20px;
+        counter-reset: section;
+        }
+        h1{
+            font-size: 32px;margin-bottom: 35px;color: rgb(110, 212, 110);
+            counter-reset: subsection;
+        }
+        h1::before{
+            content: "section " counter(section) " : ";
+            counter-increment: section;
+            color: mediumorchid;
+            
+
+        }
+        h2::before{
+            content:counter(section) "." counter(subsection) " : ";
+            counter-increment: subsection;
+            color:magenta;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>HTML and CSS</h1>
+    <h2>HTML tutorial</h2>
+    <h2>CSS tutorial</h2>
+    <h2>Bootstrap tutorial</h2> <hr>
+    <h1>Javascript</h1>
+    <H2>Javascript Tutorial</H2>
+    <H2>Jquery Tutorial</H2>
+    <H2>JSON Tutorial</H2> <hr>
+    <h1>Server side</h1>
+    <h2>SQL tutorial</h2>
+    <h2>PHP tutorial</h2>
+
+    
+</body>
+</html>
